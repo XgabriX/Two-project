@@ -6,9 +6,12 @@ import list from "./list.json";
 import { GrNext } from "react-icons/gr";
 import { ImMenu } from "react-icons/im";
 import IntroButtons from "./components/IntroButtons";
+import Todo from "./components/Todo";
 
-export default function Page() {
+
+export default async function Page() {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
     <div className="bg-red-500 h-screen flex flex-col items-center">
       <div className="p-4"></div>
@@ -32,6 +35,10 @@ export default function Page() {
         </div>}
       </div>
       <hr className="w-6/12 bg-gray-200 border-1 dark:bg-gray-200"></hr>
+      <div className="flex flex-col p-5 text-center">
+        <h1 className="text-xl">Time to focus!</h1>
+        <Todo />
+      </div>
     </div>
   );
 }  
